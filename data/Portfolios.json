@@ -17,8 +17,7 @@
   {
     "slug": "paco",
     "url": "https://paco.me",
-    "source": "https://github.com/pacocoursey/paco",
-    "mask": true
+    "source": "https://github.com/pacocoursey/paco"
   },
   {
     "slug": "ped",
