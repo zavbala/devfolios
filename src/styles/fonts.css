@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('') url('/fonts/SpaceMono-Regular.ttf') format('ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local('') url('/fonts/SpaceMono-Bold.ttf') format('ttf');
+  font-display: swap;
+}

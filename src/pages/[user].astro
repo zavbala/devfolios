@@ -1,0 +1,50 @@
+---
+import Layout from 'src/layouts/Layout.astro';
+import Users from 'data/Portfolios.json';
+import Avatar from 'src/components/Avatar.astro';
+
+export interface User {
+  slug: string;
+  url: string;
+  source: string;
+  mask?: boolean;
+}
+
+const { user: slug } = Astro.params;
+const data = Users.find((user) => user.slug === slug) as User;
+
+export const getStaticPaths = () => Users.map((user) => ({ params: { user: user.slug } }));
+---
+
+<Layout title={data.slug}>
+  <div class='mt-12 h-full'>
+    <header class='h-[15%] rounded-t-lg flex items-center justify-around shadow-md border'>
+      <div class='flex justify-between w-[7%] sm:hidden'>
+        <span class='w-5 h-5 rounded-full hover:bg-red-500 block bg-red-400'></span>
+        <span class='w-5 h-5 rounded-full hover:bg-yellow-500 block bg-yellow-400'></span>
+        <span class='w-5 h-5 rounded-full hover:bg-green-500 block bg-green-400'></span>
+      </div>
+
+      <input
+        class='text-black border bg-white p-2 w-[70%] text-center rounded-lg font-body'
+        type='text'
+        value={data?.url.replace('https://', '')}
+        disabled
+      />
+
+      <div class='w-[7%] flex items-center justify-between'>
+        <Avatar {...data} size='sm' />
+        <a href={data.source} class='block text-gray-400 hover:text-gray-500' target='_blank'>
+          <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'></path>
+          </svg>
+        </a>
+      </div>
+    </header>
+    <iframe class='w-full h-[85%]' src={data.url} frameborder='0'></iframe>
+  </div>
+</Layout>

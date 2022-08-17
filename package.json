@@ -1,0 +1,23 @@
+{
+  "name": "devfolios",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "astro": "astro",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+  },
+  "devDependencies": {
+    "@astrojs/image": "^0.3.4",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/svelte": "^1.0.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "astro": "^1.0.6",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.0",
+    "svelte": "^3.46.4"
+  }
+}

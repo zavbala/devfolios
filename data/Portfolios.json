@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "leerob",
+    "url": "https://leerob.io",
+    "source": "https://github.com/leerob/leerob.io"
+  },
+  {
+    "slug": "brittanychiang",
+    "url": "https://brittanychiang.com",
+    "source": "https://github.com/bchiang7/v4"
+  },
+  {
+    "slug": "kentcdodds",
+    "url": "https://kentcdodds.com",
+    "source": "https://github.com/kentcdodds/kentcdodds.com"
+  },
+  {
+    "slug": "paco",
+    "url": "https://paco.me",
+    "source": "https://github.com/pacocoursey/paco",
+    "mask": true
+  },
+  {
+    "slug": "ped",
+    "url": "https://ped.ro",
+    "source": "https://github.com/peduarte"
+  }
+]

@@ -1,0 +1,28 @@
+---
+export interface Props {
+  url: string;
+  slug: string;
+  mask?: boolean;
+  size: 'sm' | 'lg';
+  blank?: boolean;
+}
+
+const { url, slug, mask, size, blank } = Astro.props as Props;
+const favicon = 'https://favicon.splitbee.io' + `?url=${url}`;
+
+const scale = {
+  sm: 'w-10 h-10',
+  lg: 'w-16 h-16',
+}[size];
+---
+
+<a
+  target={blank ? '_blank' : '_self'}
+  href={!blank ? `/devfolios/${slug}` : url}
+  title={slug}
+  class={`${scale}
+	transform hover:scale-125 ${mask && 'bg-gray-200'} duration-75 ease-linear rounded-full p-2 flex items-center
+	justify-center`}
+>
+  <img src={favicon} alt='favicon' class='block' />
+</a>

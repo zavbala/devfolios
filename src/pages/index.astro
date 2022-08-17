@@ -1,0 +1,14 @@
+---
+import Layout from 'src/layouts/Layout.astro';
+import Users from 'data/Portfolios.json';
+import Avatar from 'src/components/Avatar.astro';
+
+const repo = 'https://github.com/zavbala/devfolios/pulls';
+---
+
+<Layout title='Devfolios'>
+  <section class='h-full grid grid-cols-10 justify-items-center mt-12'>
+    <>{Users.map((user) => <Avatar {...user} size='lg' />)}</>
+    <Avatar url={repo} slug='Create New Pull Request' size='lg' blank />
+  </section>
+</Layout>
