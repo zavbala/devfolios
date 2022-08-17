@@ -1,7 +1,7 @@
 ---
 name: Portfolio Request
 about: Request a new dev portfolio
-title: 'I want to nominate {DEV} '
+title: 'I want to nominate {DEV}'
 labels: nominate
 assignees: ''
 
